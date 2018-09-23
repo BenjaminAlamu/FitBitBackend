@@ -35,6 +35,7 @@ module.exports.routes = {
     action: 'view'
   },
   'POST /notification': 'NotificationController.send',
+  'GET /data': 'DataController.getData',
   // 'POST /register': 'AuthController.login',
   //  ╦ ╦╔═╗╔╗ ╔═╗╔═╗╔═╗╔═╗╔═╗
   //  ║║║║╣ ╠╩╗╠═╝╠═╣║ ╦║╣ ╚═╗

@@ -32,6 +32,12 @@ module.exports = {
     //     message: error
     //   });
     // });
+
+    var response = {
+      success: true
+    };
+
+    res.send(response);
   }
 };
 

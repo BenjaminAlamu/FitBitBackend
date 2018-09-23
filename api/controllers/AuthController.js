@@ -12,11 +12,11 @@ module.exports = {
     auth.register(req, res);
   },
   view: function (req, res) {
-    console.log("Here");
+    console.log('Here');
     console.log(process.env.TEST);
     auth.view(req, res);
   },
-  login: function (req, res){    
+  login: function (req, res){
     auth.login(req, res);
   },
   logout: function (req, res) {
