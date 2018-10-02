@@ -16,22 +16,22 @@ module.exports = {
 
     let data = 'Dear ' + patient + '\n' + message + '\n' + doctorName;
     sendEmail(data);
-    // sendSms(message).then((response) => {
-    //   if (response.errorCode) {
-    //     res.json({
-    //       status: 'failed',
-    //       statusCode: 500,
-    //       message: 'could not send sms'
-    //     });
-    //   }
-    // }).catch(error => {
-    //   console.log('error', error);
-    //   res.json({
-    //     status: 'failed',
-    //     statusCode: 200,
-    //     message: error
-    //   });
-    // });
+    sendSms(message).then((response) => {
+      if (response.errorCode) {
+        res.json({
+          status: 'failed',
+          statusCode: 500,
+          message: 'could not send sms'
+        });
+      }
+    }).catch(error => {
+      console.log('error', error);
+      res.json({
+        status: 'failed',
+        statusCode: 200,
+        message: error
+      });
+    });
 
     var response = {
       success: true
