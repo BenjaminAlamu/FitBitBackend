@@ -87,7 +87,6 @@ module.exports = {
 
   view: async (req, res) => {
 
-    console.log(process.env.development);
     //Verify tokens
     // verify.verifyToken(req, res);
     // jwt.verify(req.token, 'Secret', (err, authData) => {

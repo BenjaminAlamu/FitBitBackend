@@ -14,7 +14,7 @@ module.exports = {
     let message = req.body.message;
     let patient = req.body.patient;
 
-    let data = 'Dear ' + patient + '\n' + message + '\n' + doctorName;
+    let data = 'Dear ' + patient + '\n' + message + '\nFrom ' + doctorName;
     sendEmail(data);
     sendSms(message).then((response) => {
       if (response.errorCode) {
